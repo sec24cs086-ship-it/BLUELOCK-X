@@ -1,11 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
+import { LandingShell } from '@/components/layout/LandingShell'
 import { ProtectedRoute } from './ProtectedRoute'
+import { LandingPage } from '@/pages/LandingPage'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <ProtectedRoute><AppShell /></ProtectedRoute>,
+    element: (
+      <LandingShell>
+        <LandingPage />
+      </LandingShell>
+    ),
   },
   {
     path: '/app',
@@ -18,10 +24,6 @@ const router = createBrowserRouter([
       { path: 'security', element: <div className="text-slate-300">Security placeholder</div> },
       { path: 'notifications', element: <div className="text-slate-300">Notifications placeholder</div> },
     ],
-  },
-  {
-    path: '/auth',
-    element: <div className="text-slate-300">Auth placeholder</div>,
   },
 ])
 
