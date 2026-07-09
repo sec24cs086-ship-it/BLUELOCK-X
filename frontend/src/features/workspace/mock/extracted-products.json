@@ -1,0 +1,38 @@
+[
+  {
+    "id": "prod-1",
+    "name": "Organic Apples",
+    "category": "Produce",
+    "confidence": 96,
+    "quantity": 2,
+    "unitPrice": 3.49,
+    "source": "ocr"
+  },
+  {
+    "id": "prod-2",
+    "name": "Almond Milk",
+    "category": "Beverages",
+    "confidence": 88,
+    "quantity": 1,
+    "unitPrice": 4.29,
+    "source": "ocr"
+  },
+  {
+    "id": "prod-3",
+    "name": "Eco Detergent",
+    "category": "Household",
+    "confidence": 82,
+    "quantity": 1,
+    "unitPrice": 7.99,
+    "source": "ocr"
+  },
+  {
+    "id": "prod-4",
+    "name": "Sourdough Loaf",
+    "category": "Bakery",
+    "confidence": 91,
+    "quantity": 1,
+    "unitPrice": 5.29,
+    "source": "ocr"
+  }
+]

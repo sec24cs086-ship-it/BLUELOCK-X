@@ -1,0 +1,42 @@
+[
+  {
+    "category": "Groceries",
+    "packagingType": "Cardboard",
+    "baseFactor": 1.6,
+    "transportFactor": 0.18,
+    "storageFactor": 0.11,
+    "explanation": "Cardboard packaging has moderate emissions and benefits from light-weight transport logistics."
+  },
+  {
+    "category": "Beverages",
+    "packagingType": "Plastic",
+    "baseFactor": 2.4,
+    "transportFactor": 0.26,
+    "storageFactor": 0.16,
+    "explanation": "Plastic packaging and chilled distribution increase the footprint of beverage items."
+  },
+  {
+    "category": "Household",
+    "packagingType": "Plastic",
+    "baseFactor": 2.1,
+    "transportFactor": 0.2,
+    "storageFactor": 0.12,
+    "explanation": "Dense household products often use multi-material packaging and longer distribution chains."
+  },
+  {
+    "category": "Produce",
+    "packagingType": "Biodegradable",
+    "baseFactor": 0.9,
+    "transportFactor": 0.14,
+    "storageFactor": 0.08,
+    "explanation": "Fresh produce has lower packaging impact, though air freight and cold chains can still raise emissions."
+  },
+  {
+    "category": "Bakery",
+    "packagingType": "Cardboard",
+    "baseFactor": 1.3,
+    "transportFactor": 0.16,
+    "storageFactor": 0.09,
+    "explanation": "Bakery goods are typically packaged in light cardboard, keeping the base footprint relatively low."
+  }
+]

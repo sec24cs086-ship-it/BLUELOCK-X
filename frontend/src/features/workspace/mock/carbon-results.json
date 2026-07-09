@@ -1,0 +1,62 @@
+[
+  {
+    "id": "c-1",
+    "productName": "Organic Apples",
+    "category": "Produce",
+    "packagingType": "Biodegradable",
+    "origin": "Local farm",
+    "transportDistanceKm": 24,
+    "baseEmission": 0.41,
+    "packagingImpact": 0.16,
+    "transportImpact": 0.14,
+    "storageImpact": 0.11,
+    "totalCarbonScore": 0.82,
+    "confidence": 96,
+    "explanation": "Local sourcing and biodegradable packaging keep this product in the low-emissions range.",
+    "breakdown": [
+      { "label": "Packaging", "value": 0.24, "unit": "kg", "detail": "Biodegradable wrap and compostable tray" },
+      { "label": "Transport", "value": 0.31, "unit": "kg", "detail": "Short route from local farm" },
+      { "label": "Cold chain", "value": 0.27, "unit": "kg", "detail": "Minimal refrigeration during handling" }
+    ]
+  },
+  {
+    "id": "c-2",
+    "productName": "Sparkling Water",
+    "category": "Beverages",
+    "packagingType": "Plastic",
+    "origin": "Regional bottler",
+    "transportDistanceKm": 180,
+    "baseEmission": 0.64,
+    "packagingImpact": 0.52,
+    "transportImpact": 0.41,
+    "storageImpact": 0.17,
+    "totalCarbonScore": 1.74,
+    "confidence": 92,
+    "explanation": "Plastic bottles and longer-haul transport raise the emissions footprint for this beverage.",
+    "breakdown": [
+      { "label": "Packaging", "value": 0.76, "unit": "kg", "detail": "PET bottle and shrink wrap" },
+      { "label": "Transport", "value": 0.58, "unit": "kg", "detail": "Regional fleet delivery" },
+      { "label": "Processing", "value": 0.4, "unit": "kg", "detail": "Carbon-intensive bottling process" }
+    ]
+  },
+  {
+    "id": "c-3",
+    "productName": "Laundry Detergent",
+    "category": "Household",
+    "packagingType": "Plastic",
+    "origin": "National warehouse",
+    "transportDistanceKm": 310,
+    "baseEmission": 0.82,
+    "packagingImpact": 0.74,
+    "transportImpact": 0.39,
+    "storageImpact": 0.18,
+    "totalCarbonScore": 2.13,
+    "confidence": 88,
+    "explanation": "Bulk detergent uses heavier plastic packaging and a longer national distribution route.",
+    "breakdown": [
+      { "label": "Packaging", "value": 0.91, "unit": "kg", "detail": "High-volume plastic container" },
+      { "label": "Transport", "value": 0.83, "unit": "kg", "detail": "Cross-region freight" },
+      { "label": "Handling", "value": 0.39, "unit": "kg", "detail": "Warehouse and palletization" }
+    ]
+  }
+]

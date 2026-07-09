@@ -1,0 +1,22 @@
+{
+  "progress": 100,
+  "stages": [
+    { "id": "stage-1", "label": "Image intake", "status": "complete", "detail": "Receipt image loaded successfully." },
+    { "id": "stage-2", "label": "Layout analysis", "status": "complete", "detail": "Document structure detected." },
+    { "id": "stage-3", "label": "Text extraction", "status": "complete", "detail": "Character clusters classified." },
+    { "id": "stage-4", "label": "Confidence scoring", "status": "complete", "detail": "Merchant and totals validated." }
+  ],
+  "boxes": [
+    { "id": "box-1", "label": "Merchant", "x": 14, "y": 18, "width": 36, "height": 12, "confidence": 96 },
+    { "id": "box-2", "label": "Date", "x": 64, "y": 18, "width": 20, "height": 10, "confidence": 94 },
+    { "id": "box-3", "label": "Items", "x": 16, "y": 46, "width": 66, "height": 28, "confidence": 91 },
+    { "id": "box-4", "label": "Totals", "x": 16, "y": 78, "width": 28, "height": 10, "confidence": 95 }
+  ],
+  "statistics": {
+    "linesDetected": 18,
+    "wordsDetected": 92,
+    "confidence": 94,
+    "processingTimeMs": 1280
+  },
+  "completedAt": "2026-07-09T12:05:00.000Z"
+}

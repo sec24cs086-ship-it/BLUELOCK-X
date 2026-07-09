@@ -1,0 +1,14 @@
+[
+  {
+    "region": "Local",
+    "adjustment": 0.92
+  },
+  {
+    "region": "Regional",
+    "adjustment": 1.08
+  },
+  {
+    "region": "National",
+    "adjustment": 1.24
+  }
+]
