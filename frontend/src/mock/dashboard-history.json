@@ -1,0 +1,20 @@
+[
+  {
+    "id": "h1",
+    "label": "Receipt analyzed",
+    "detail": "Grocery haul from Green Mart reviewed",
+    "time": "6m ago"
+  },
+  {
+    "id": "h2",
+    "label": "Recommendation applied",
+    "detail": "Refillable beverage swap activated",
+    "time": "1h ago"
+  },
+  {
+    "id": "h3",
+    "label": "Goal updated",
+    "detail": "Monthly carbon reduction target adjusted",
+    "time": "3h ago"
+  }
+]

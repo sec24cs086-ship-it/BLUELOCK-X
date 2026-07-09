@@ -14,6 +14,7 @@ import {
   WelcomePage,
 } from '@/pages/auth/AuthPages'
 import { WorkspacePage } from '@/features/workspace'
+import { Dashboard } from '@/components/Dashboard'
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       { index: true, element: <WorkspacePage /> },
       { path: 'receipts', element: <WorkspacePage /> },
       { path: 'insights', element: <div className="text-slate-300">Insights placeholder</div> },
-      { path: 'analytics', element: <div className="text-slate-300">Analytics placeholder</div> },
+      { path: 'analytics', element: <Dashboard /> },
       { path: 'security', element: <div className="text-slate-300">Security placeholder</div> },
       { path: 'notifications', element: <div className="text-slate-300">Notifications placeholder</div> },
     ],

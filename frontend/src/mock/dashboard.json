@@ -1,0 +1,66 @@
+{
+  "kpis": [
+    { "label": "Total receipts", "value": "24", "change": "+6 this month", "positive": true },
+    { "label": "Total carbon", "value": "48.2 kg CO₂e", "change": "-11% vs last month", "positive": true },
+    { "label": "Carbon saved", "value": "12.4 kg", "change": "+3.1 kg this week", "positive": true },
+    { "label": "Eco score", "value": "84/100", "change": "+5 pts", "positive": true }
+  ],
+  "carbonTrend": [
+    { "name": "Jan", "value": 52 },
+    { "name": "Feb", "value": 48 },
+    { "name": "Mar", "value": 46 },
+    { "name": "Apr", "value": 44 },
+    { "name": "May", "value": 41 },
+    { "name": "Jun", "value": 38 }
+  ],
+  "ecoScoreTrend": [
+    { "name": "Jan", "value": 72 },
+    { "name": "Feb", "value": 74 },
+    { "name": "Mar", "value": 77 },
+    { "name": "Apr", "value": 79 },
+    { "name": "May", "value": 82 },
+    { "name": "Jun", "value": 84 }
+  ],
+  "categoryEmissions": [
+    { "name": "Produce", "value": 28, "fill": "#34d399" },
+    { "name": "Packaging", "value": 19, "fill": "#38bdf8" },
+    { "name": "Meat", "value": 14, "fill": "#fb923c" },
+    { "name": "Dairy", "value": 11, "fill": "#a78bfa" }
+  ],
+  "recommendationImpact": [
+    { "name": "Refill", "value": 9 },
+    { "name": "Local", "value": 7 },
+    { "name": "Bulk", "value": 5 },
+    { "name": "Recycled", "value": 4 }
+  ],
+  "recentReceipts": [
+    { "id": "r1", "merchant": "Green Mart", "date": "Today", "total": "$84.20", "impact": "Low" },
+    { "id": "r2", "merchant": "North Market", "date": "Yesterday", "total": "$126.90", "impact": "Medium" },
+    { "id": "r3", "merchant": "Local Pantry", "date": "2d ago", "total": "$58.60", "impact": "Low" }
+  ],
+  "recentActivity": [
+    { "id": "a1", "label": "Recommendation applied", "detail": "Refillable glass added to your plan", "time": "6m ago" },
+    { "id": "a2", "label": "Goal milestone", "detail": "You reached 70% of your monthly carbon target", "time": "1h ago" },
+    { "id": "a3", "label": "Receipt reviewed", "detail": "A new lunch receipt was analyzed", "time": "3h ago" }
+  ],
+  "achievements": [
+    { "id": "ach-1", "title": "First 10 receipts", "subtitle": "Completed your onboarding journey", "unlocked": true },
+    { "id": "ach-2", "title": "Eco champion", "subtitle": "Saved 10kg of carbon", "unlocked": true },
+    { "id": "ach-3", "title": "Impact streak", "subtitle": "7 days of consistent actions", "unlocked": false }
+  ],
+  "goals": [
+    { "id": "goal-1", "title": "Cut monthly emissions by 20%", "progress": 72, "target": "72% complete" },
+    { "id": "goal-2", "title": "Apply 5 sustainability actions", "progress": 60, "target": "3 of 5 complete" }
+  ],
+  "aiInsights": [
+    "Imported produce remains the largest emission source in your recent receipts.",
+    "Your refill habits are now reducing overall packaging impact by 18%.",
+    "A local produce swap could improve your eco score by 3 points this month."
+  ],
+  "environmentalStats": [
+    { "label": "Trees equivalent", "value": "18.4 trees", "detail": "Equivalent to a full-season forest offset" },
+    { "label": "Driving distance avoided", "value": "214 miles", "detail": "Lower transport intensity from local swaps" },
+    { "label": "Electricity saved", "value": "94 kWh", "detail": "From reduced refrigeration and packaging" },
+    { "label": "Water saved", "value": "1,240 L", "detail": "From refill and lower-impact product choices" }
+  ]
+}
