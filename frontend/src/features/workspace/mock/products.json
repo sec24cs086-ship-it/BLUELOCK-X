@@ -1,0 +1,29 @@
+[
+  {
+    "id": "item-1",
+    "name": "Organic Apples",
+    "category": "Produce",
+    "quantity": 2,
+    "unitPrice": 4.2,
+    "carbonImpact": 1.6,
+    "confidence": 98
+  },
+  {
+    "id": "item-2",
+    "name": "Almond Milk",
+    "category": "Dairy Alternatives",
+    "quantity": 1,
+    "unitPrice": 3.8,
+    "carbonImpact": 2.1,
+    "confidence": 95
+  },
+  {
+    "id": "item-3",
+    "name": "Reusable Bottle",
+    "category": "Household",
+    "quantity": 1,
+    "unitPrice": 19.99,
+    "carbonImpact": 0.8,
+    "confidence": 94
+  }
+]

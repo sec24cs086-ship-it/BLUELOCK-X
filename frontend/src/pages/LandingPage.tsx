@@ -1,4 +1,5 @@
 import { motion, useMotionValue, useSpring } from 'framer-motion'
+import { Link } from "react-router-dom";
 import { useEffect, useMemo, useState } from 'react'
 import { BarChart3, Cpu, Globe2, Zap, ShieldCheck, Sparkles, Star, Truck } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -11,6 +12,8 @@ import { AccordionItem } from '@/components/ui/accordion'
 import { ReceiptUpload } from '@/components/ui/receipt-upload'
 import { Footer } from '@/components/ui/footer'
 import { Badge } from '@/components/ui/badge'
+
+
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 32 },
@@ -127,10 +130,14 @@ export function LandingPage() {
             </div>
             <div className="flex flex-wrap items-center gap-4">
               <motion.div whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 240, damping: 18 }}>
-                <Button size="lg">Start your free trial</Button>
+                <Link to="/auth">
+                  <Button size="lg">Sign In</Button>
+                </Link>
               </motion.div>
               <motion.div whileHover={{ y: -4 }} transition={{ type: 'spring', stiffness: 240, damping: 18 }}>
-                <Button variant="ghost" size="lg">See the demo</Button>
+                <Link to="/auth/register">
+                  <Button variant="ghost" size="lg">Create Account</Button>
+                </Link>
               </motion.div>
             </div>
             <div className="grid gap-4 sm:grid-cols-3">

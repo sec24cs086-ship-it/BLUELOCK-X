@@ -1,0 +1,26 @@
+[
+  {
+    "id": "rec-1",
+    "title": "Choose local produce",
+    "description": "Switching to a local supplier could reduce transport emissions by 12%.",
+    "impact": "Lower transport emissions",
+    "savings": "~1.8 kg CO₂",
+    "category": "Supply chain"
+  },
+  {
+    "id": "rec-2",
+    "title": "Bulk packaging",
+    "description": "Consolidating packaging can reduce the overall footprint of the basket.",
+    "impact": "Lower packaging intensity",
+    "savings": "~0.9 kg CO₂",
+    "category": "Packaging"
+  },
+  {
+    "id": "rec-3",
+    "title": "Reusable alternatives",
+    "description": "Replacing single-use goods with durable alternatives has immediate savings.",
+    "impact": "Reduced waste generation",
+    "savings": "~0.6 kg CO₂",
+    "category": "Materials"
+  }
+]

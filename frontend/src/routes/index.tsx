@@ -13,6 +13,7 @@ import {
   VerifyEmailPage,
   WelcomePage,
 } from '@/pages/auth/AuthPages'
+import { WorkspacePage } from '@/features/workspace'
 
 const router = createBrowserRouter([
   {
@@ -45,8 +46,8 @@ const router = createBrowserRouter([
     path: '/app',
     element: <ProtectedRoute><AppShell /></ProtectedRoute>,
     children: [
-      { index: true, element: <div className="text-slate-300">Foundation placeholder</div> },
-      { path: 'receipts', element: <div className="text-slate-300">Receipts placeholder</div> },
+      { index: true, element: <WorkspacePage /> },
+      { path: 'receipts', element: <WorkspacePage /> },
       { path: 'insights', element: <div className="text-slate-300">Insights placeholder</div> },
       { path: 'analytics', element: <div className="text-slate-300">Analytics placeholder</div> },
       { path: 'security', element: <div className="text-slate-300">Security placeholder</div> },

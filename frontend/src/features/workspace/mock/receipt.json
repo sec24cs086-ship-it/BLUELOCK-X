@@ -1,0 +1,91 @@
+{
+  "id": "receipt-001",
+  "merchant": "Northwind Market",
+  "date": "2026-07-09",
+  "total": 128.42,
+  "currency": "USD",
+  "confidence": 96,
+  "status": "complete",
+  "uploadProgress": 100,
+  "ocrProgress": 100,
+  "carbonProgress": 100,
+  "summary": "Receipt successfully analyzed with strong OCR confidence and a moderate carbon impact profile.",
+  "merchantAddress": "452 Harbor Ave, Seattle, WA",
+  "items": [
+    {
+      "id": "item-1",
+      "name": "Organic Apples",
+      "category": "Produce",
+      "quantity": 2,
+      "unitPrice": 4.2,
+      "carbonImpact": 1.6,
+      "confidence": 98
+    },
+    {
+      "id": "item-2",
+      "name": "Almond Milk",
+      "category": "Dairy Alternatives",
+      "quantity": 1,
+      "unitPrice": 3.8,
+      "carbonImpact": 2.1,
+      "confidence": 95
+    },
+    {
+      "id": "item-3",
+      "name": "Reusable Bottle",
+      "category": "Household",
+      "quantity": 1,
+      "unitPrice": 19.99,
+      "carbonImpact": 0.8,
+      "confidence": 94
+    }
+  ],
+  "carbonMetrics": {
+    "totalEmissions": 14.7,
+    "score": 74,
+    "benchmark": "Below market average",
+    "reductionPotential": 18,
+    "efficiency": 88
+  },
+  "recommendations": [
+    {
+      "id": "rec-1",
+      "title": "Choose local produce",
+      "description": "Switching to a local supplier could reduce transport emissions by 12%.",
+      "impact": "Lower transport emissions",
+      "savings": "~1.8 kg CO₂",
+      "category": "Supply chain"
+    },
+    {
+      "id": "rec-2",
+      "title": "Bulk packaging",
+      "description": "Consolidating packaging can reduce the overall footprint of the basket.",
+      "impact": "Lower packaging intensity",
+      "savings": "~0.9 kg CO₂",
+      "category": "Packaging"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "step-1",
+      "title": "Receipt uploaded",
+      "description": "The file was received and queued for analysis.",
+      "timestamp": "Just now",
+      "completed": true
+    },
+    {
+      "id": "step-2",
+      "title": "OCR processing",
+      "description": "Receipt lines and merchant details were extracted.",
+      "timestamp": "1 min ago",
+      "completed": true
+    },
+    {
+      "id": "step-3",
+      "title": "Carbon scoring",
+      "description": "Environmental impact was calculated for each item.",
+      "timestamp": "2 min ago",
+      "completed": true
+    }
+  ]
+}

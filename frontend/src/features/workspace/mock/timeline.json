@@ -1,0 +1,23 @@
+[
+  {
+    "id": "step-1",
+    "title": "Receipt uploaded",
+    "description": "The file was received and queued for analysis.",
+    "timestamp": "Just now",
+    "completed": true
+  },
+  {
+    "id": "step-2",
+    "title": "OCR processing",
+    "description": "Receipt lines and merchant details were extracted.",
+    "timestamp": "1 min ago",
+    "completed": true
+  },
+  {
+    "id": "step-3",
+    "title": "Carbon scoring",
+    "description": "Environmental impact was calculated for each item.",
+    "timestamp": "2 min ago",
+    "completed": true
+  }
+]
