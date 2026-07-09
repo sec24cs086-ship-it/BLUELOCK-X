@@ -1,6 +1,9 @@
+import { request } from '@/api/client'
+import { API_ENDPOINTS } from '@/api/endpoints'
 import recommendationEngineData from '@/mock/recommendation-engine.json'
 import recommendationInsightsData from '@/mock/recommendation-insights.json'
 import recommendationRankingData from '@/mock/recommendation-ranking.json'
+import type { ApiResponseEnvelope } from '@/types/api.types'
 import type { Recommendation, RecommendationEnginePayload, RecommendationInsight, RecommendationPriorityLevel, RecommendationRankingData, RecommendationSummaryData } from '@/types/recommendation.types'
 
 const priorityRank: Record<RecommendationPriorityLevel, number> = {
@@ -18,21 +21,40 @@ function normalizeRecommendations(recommendations: Recommendation[], baselineSco
   }))
 }
 
-export async function getRecommendations(baseLineScore = 0): Promise<RecommendationEnginePayload> {
-  const engineSummary = recommendationEngineData.summary as RecommendationSummaryData
-  const ranking = recommendationRankingData as RecommendationRankingData
-  const insights = recommendationInsightsData.insights as RecommendationInsight[]
-  const recommendations = normalizeRecommendations(recommendationEngineData.recommendations as Recommendation[], baseLineScore)
+function normalizeRecommendationPayload(payload?: Partial<RecommendationEnginePayload> | null, baselineScore = 0): RecommendationEnginePayload {
+  const engineSummary = (payload?.summary ?? recommendationEngineData.summary) as RecommendationSummaryData
+  const ranking = (payload?.rankings ?? recommendationRankingData) as RecommendationRankingData
+  const insights = (payload?.insights ?? recommendationInsightsData.insights) as RecommendationInsight[]
+  const recommendations = normalizeRecommendations((payload?.recommendations ?? recommendationEngineData.recommendations) as Recommendation[], baselineScore)
 
   return {
     summary: {
       ...engineSummary,
-      totalPotentialKg: Number((engineSummary.totalPotentialKg + baseLineScore / 100).toFixed(2)),
+      totalPotentialKg: Number((engineSummary.totalPotentialKg + baselineScore / 100).toFixed(2)),
     },
     rankings: ranking,
     insights,
-    coachSummary: recommendationInsightsData.coachSummary as string,
+    coachSummary: payload?.coachSummary ?? recommendationInsightsData.coachSummary,
     recommendations,
+  }
+}
+
+export async function getRecommendations(baseLineScore = 0): Promise<RecommendationEnginePayload> {
+  try {
+    const response = await request<ApiResponseEnvelope<Partial<RecommendationEnginePayload>>>({
+      method: 'POST',
+      url: API_ENDPOINTS.recommendations,
+      data: { action: 'list', baselineScore: baseLineScore },
+    })
+
+    if (response?.success === false) {
+      throw new Error(response.message ?? 'Unable to load recommendations')
+    }
+
+    return normalizeRecommendationPayload(response?.data, baseLineScore)
+  } catch (error) {
+    console.error('Failed to load recommendations from FastAPI', error)
+    return normalizeRecommendationPayload(undefined, baseLineScore)
   }
 }
 

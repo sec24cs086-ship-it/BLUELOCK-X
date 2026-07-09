@@ -1,4 +1,7 @@
+import { request } from '@/api/client'
+import { API_ENDPOINTS } from '@/api/endpoints'
 import uploadResponse from '@/features/workspace/mock/upload-response.json'
+import type { ApiResponseEnvelope } from '@/types/api.types'
 import type { UploadResult } from '@/features/workspace/types/upload.types'
 
 const mockUploadResponse = uploadResponse as UploadResult
@@ -26,14 +29,31 @@ export async function uploadReceipt(file: File): Promise<UploadResult> {
     throw new Error('File exceeds the 10 MB limit. Please choose a smaller receipt.')
   }
 
-  return new Promise((resolve) => {
-    window.setTimeout(() => {
-      resolve({
-        ...mockUploadResponse,
-        fileName: file.name,
-        size: file.size,
-        status: 'success',
-      })
-    }, 1100)
-  })
+  try {
+    const formData = new FormData()
+    formData.append('file', file)
+
+    const response = await request<ApiResponseEnvelope<UploadResult>>({
+      method: 'POST',
+      url: API_ENDPOINTS.upload,
+      data: formData,
+      headers: {
+        'Content-Type': 'multipart/form-data',
+      },
+    })
+
+    if (response?.success === false) {
+      throw new Error(response.message ?? 'Unable to upload receipt')
+    }
+
+    return {
+      ...(response.data ?? mockUploadResponse),
+      fileName: file.name,
+      size: file.size,
+      status: 'success',
+    }
+  } catch (error) {
+    console.error('FastAPI upload failed', error)
+    throw error instanceof Error ? error : new Error('Unable to upload receipt right now.')
+  }
 }
