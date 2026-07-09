@@ -3,6 +3,13 @@ export interface User {
   email: string
   name: string
   role: 'user' | 'admin'
+  company?: string
+  teamSize?: string
+  focusArea?: string
+  userType?: 'operator' | 'finance' | 'strategy'
+  onboardingCompleted?: boolean
+  profileComplete?: boolean
+  emailVerified?: boolean
 }
 
 export interface AuthState {
@@ -14,6 +21,7 @@ export interface AuthState {
 export interface AuthContextValue extends AuthState {
   login: (user: User) => void
   logout: () => void
+  updateUser: (updates: Partial<User>) => void
 }
 
 export interface ThemeContextValue {

@@ -1,8 +1,18 @@
-import { createBrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, Outlet } from 'react-router-dom'
 import { AppShell } from '@/components/layout/AppShell'
 import { LandingShell } from '@/components/layout/LandingShell'
 import { ProtectedRoute } from './ProtectedRoute'
 import { LandingPage } from '@/pages/LandingPage'
+import {
+  ForgotPasswordPage,
+  LoginPage,
+  ProfileSetupPage,
+  RegisterPage,
+  ResetPasswordPage,
+  UserTypePage,
+  VerifyEmailPage,
+  WelcomePage,
+} from '@/pages/auth/AuthPages'
 
 const router = createBrowserRouter([
   {
@@ -12,6 +22,24 @@ const router = createBrowserRouter([
         <LandingPage />
       </LandingShell>
     ),
+  },
+  {
+    path: '/auth',
+    element: (
+      <LandingShell>
+        <Outlet />
+      </LandingShell>
+    ),
+    children: [
+      { index: true, element: <LoginPage /> },
+      { path: 'register', element: <RegisterPage /> },
+      { path: 'forgot-password', element: <ForgotPasswordPage /> },
+      { path: 'reset-password', element: <ResetPasswordPage /> },
+      { path: 'verify-email', element: <VerifyEmailPage /> },
+      { path: 'welcome', element: <WelcomePage /> },
+      { path: 'profile', element: <ProfileSetupPage /> },
+      { path: 'user-type', element: <UserTypePage /> },
+    ],
   },
   {
     path: '/app',
