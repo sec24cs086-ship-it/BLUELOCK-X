@@ -54,6 +54,11 @@ const router = createBrowserRouter([
       { path: 'notifications', element: <div className="text-slate-300">Notifications placeholder</div> },
     ],
   },
+  {
+    path: '/workspace',
+    element: <ProtectedRoute><AppShell /></ProtectedRoute>,
+    children: [{ index: true, element: <WorkspacePage /> }],
+  },
 ])
 
 export default router

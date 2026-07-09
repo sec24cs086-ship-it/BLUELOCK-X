@@ -51,10 +51,3 @@ export interface TimelineEntry {
   timestamp: string
   completed: boolean
 }
-
-export interface UploadState {
-  isDragging: boolean
-  progress: number
-  status: 'idle' | 'uploading' | 'processing' | 'complete' | 'error'
-  fileName?: string
-}
