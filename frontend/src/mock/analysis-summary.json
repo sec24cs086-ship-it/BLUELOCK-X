@@ -1,0 +1,62 @@
+{
+  "carbonFootprint": "2.84 kg CO₂e",
+  "ecoScore": 81,
+  "carbonGrade": "B",
+  "confidence": 94,
+  "productCount": 8,
+  "recommendationCount": 4,
+  "potentialCarbonReduction": 1.82,
+  "estimatedCostSaving": "$148 / year",
+  "averageOcrConfidence": 96,
+  "processingTime": "3.2s",
+  "environmentalEquivalents": [
+    {
+      "label": "Trees offset",
+      "value": "3.2 trees",
+      "detail": "Equivalent to planting a small grove over a year"
+    },
+    {
+      "label": "Water saved",
+      "value": "795 L",
+      "detail": "From lower-impact product swaps and refill behavior"
+    },
+    {
+      "label": "Miles avoided",
+      "value": "14 miles",
+      "detail": "Reduced freight and transport intensity"
+    }
+  ],
+  "executiveSummary": "Most emissions originate from imported produce and plastic packaging. Applying the highest-priority recommendations could reduce emissions by approximately 32% while also lowering overall shopping cost and preserving the basket's everyday convenience.",
+  "timeline": [
+    {
+      "title": "Receipt uploaded",
+      "detail": "The sample receipt was ingested and parsed for product-level analysis.",
+      "timestamp": "09:14"
+    },
+    {
+      "title": "OCR completed",
+      "detail": "Receipt text and product lines were extracted with high confidence.",
+      "timestamp": "09:15"
+    },
+    {
+      "title": "Products extracted",
+      "detail": "The analysis engine organized the receipt into product-level sustainability inputs.",
+      "timestamp": "09:16"
+    },
+    {
+      "title": "Carbon calculated",
+      "detail": "The sustainability simulator estimated each product's environmental impact.",
+      "timestamp": "09:17"
+    },
+    {
+      "title": "Recommendations generated",
+      "detail": "The engine prioritized the highest-impact and easiest-to-adopt swaps.",
+      "timestamp": "09:18"
+    },
+    {
+      "title": "Analysis complete",
+      "detail": "The executive summary was finalized with a premium mock-ready action plan.",
+      "timestamp": "09:19"
+    }
+  ]
+}
