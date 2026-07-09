@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { RecommendationEngine } from '@/components/RecommendationEngine'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { CarbonEngine } from './CarbonEngine'
 import { OCRProcessing } from './OCRProcessing'
@@ -34,6 +35,10 @@ export function CenterPanel() {
 
       <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.18 }}>
         <CarbonEngine />
+      </motion.div>
+
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.24 }}>
+        <RecommendationEngine />
       </motion.div>
 
       {cards.map((card, index) => (
